@@ -7,6 +7,8 @@ public class Oops1 {
 //        it = new Student[5];
 //        System.out.println(it[1]);
 
+        int age = 5;
+
 
 
             Student karan = new Student();
