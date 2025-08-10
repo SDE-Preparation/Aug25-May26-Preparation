@@ -12,6 +12,7 @@ public class Oops1 {
             Student karan = new Student();
             Student leena = karan;
 
+
             System.out.println(leena.age);
             System.out.println(leena.department);
             karan.Echo();
