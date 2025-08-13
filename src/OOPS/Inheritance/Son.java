@@ -1,6 +1,6 @@
 package OOPS.Inheritance;
 
-
+//check code updates
 
 public class Son {
     public static void main(String[] args) {
