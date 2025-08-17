@@ -1,17 +1,6 @@
 package OOPS.Abstraction;
 
 
-class Karan{
-    private int age;
-
-    public int getAge() {
-        return age;
-    }
-
-    public Karan(int age) {
-        this.age = age;
-    }
-}
 // Abstract class
 abstract class Vehicle {
     // Abstract method (no implementation)
