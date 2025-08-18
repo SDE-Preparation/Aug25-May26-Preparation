@@ -4,23 +4,21 @@ class secondLargest {
     public static int getSecondLargest(int[] arr) {
         // code here
 
-        if(arr.length <= 1){
+        if(arr.length < 2){
             return -1;
         }
-        int largest = arr[0];
-        int secLargest = largest;
+        int largest = Integer.MIN_VALUE;
+        int secLargest = Integer.MIN_VALUE;
 
-        for(int i = 1; i < arr.length ; i++){
-
+        for(int i = 0; i < arr.length ; i++){
             if(largest < arr[i]){
-
-                if(largest != secLargest){
-                    secLargest = largest;
-                }
+                secLargest = largest;
                 largest = arr[i];
+            }else if(arr[i] > secLargest && secLargest < largest){
+
+                secLargest = arr[i];
+
             }
-
-
         }
 
         if(secLargest == largest){
@@ -32,7 +30,7 @@ class secondLargest {
 
     public static void main(String[] args) {
         int[] arr = {
-                12, 35, 1, 10, 34, 1
+                20769,19913,16575
         };
 
         System.out.println(getSecondLargest(arr));
