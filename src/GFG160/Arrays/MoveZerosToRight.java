@@ -30,6 +30,8 @@ public class MoveZerosToRight {
 //
 //    }
 
+
+    // brute force solution
     static int[] moveZeroToRight(int[] arr){
 
         int temp = 0;
@@ -42,8 +44,6 @@ public class MoveZerosToRight {
                 newArr[temp] = arr[i];
                 temp++;
             }
-
-
 
         }
 
