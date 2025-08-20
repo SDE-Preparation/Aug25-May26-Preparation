@@ -18,9 +18,14 @@ class Dog extends Animal {
 
 
 public class MultiLevelInheritance {
+
+    public static int hello(){
+        return 10;
+    }
     public static void main(String[] args) {
-        Animal dog = new Dog(); // Parent reference, child object
-        dog.sound();
+
+
+        System.out.println(hello());
 
     }
 }
