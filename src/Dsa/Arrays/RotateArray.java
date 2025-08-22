@@ -13,9 +13,24 @@ public class RotateArray {
         }
 
 //        rotateLeft(arr,rotateOptimize);
+        rotateLeftOptimization(arr,0,rotateOptimize-1);
+        rotateLeftOptimization(arr,rotateOptimize,arr.length-1);
+        rotateLeftOptimization(arr,0,arr.length-1);
+//        rotateRight(arr,rotateOptimize);
 
-        rotateRight(arr,rotateOptimize);
+    }
 
+    public static void rotateLeftOptimization(int[] arr, int start,int end){
+
+        while(start < end){
+            int temp = arr[start];
+            arr[start] = arr[end];
+            arr[end] = temp;
+            start++;
+            end--;
+        }
+
+        System.out.println(Arrays.toString(arr));
     }
 
     public static void rotateLeft(int[] arr, int rotateOptimize){
