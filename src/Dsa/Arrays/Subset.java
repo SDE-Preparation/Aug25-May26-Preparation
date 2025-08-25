@@ -32,8 +32,6 @@ public class Subset {
         HashMap<Integer,Integer> mainCount = new HashMap<>();
         HashMap<Integer,Integer> subCount = new HashMap<>();
         int count = 0;
-
-
         for(int i = 0; i< main.length; i++){
             count = 0;
             for(int j = 0; j< main.length; j++){
@@ -41,10 +39,8 @@ public class Subset {
                     count++;
                 }
             }
-
             mainCount.put(main[i],count);
         }
-
         for(int i = 0; i< sub.length; i++){
             count = 0;
             for(int j = 0; j< sub.length; j++){
@@ -52,15 +48,8 @@ public class Subset {
                     count++;
                 }
             }
-
             subCount.put(sub[i],count);
         }
-
-//        for(int j = 0;j < mainCount.size();j++){
-//            for(int z = 0; z < subCount.size();z++){
-//                if(mainCount.get())
-//            }
-//        }
         Boolean keyExist = false;
         for(Integer subKey : subCount.keySet()){
             keyExist = false;
@@ -72,12 +61,10 @@ public class Subset {
                     }
                 }
             }
-
             if(!keyExist){
                 return false;
             }
         }
-
         return true;
 
     }
@@ -88,3 +75,4 @@ public class Subset {
         System.out.println(isSubset2(main,sub));
     }
 }
+
