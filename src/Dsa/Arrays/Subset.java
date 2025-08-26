@@ -68,11 +68,35 @@ public class Subset {
         return true;
 
     }
+
+    public static boolean isSubsetOpt(int[] main, int[] sub) {
+        HashMap<Integer, Integer> freq = new HashMap<>();
+
+        // Count frequencies of main array
+        for (int num : main) {
+            freq.put(num, freq.getOrDefault(num, 0) + 1);
+            // number , count
+            // number , if exist add extra 1, if nothing means set 0
+        }
+
+//        System.out.println(freq);
+
+        // Check sub elements against main frequencies
+        for (int num : sub) {
+            if (!freq.containsKey(num) || freq.get(num) == 0) {
+                return false; // not enough or missing
+            }
+            freq.put(num, freq.get(num) - 1); // consume one occurrence
+        }
+
+        return true;
+    }
+
     public static void main(String[] args) {
         int[] main = { 1, 2, 2, 3, 3, 3};
-        int[] sub = { 3, 5, 3};
+        int[] sub = { 3, 2, 3};
 
-        System.out.println(isSubset2(main,sub));
+        System.out.println(isSubsetOpt(main,sub));
     }
 }
 
