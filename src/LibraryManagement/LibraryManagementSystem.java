@@ -39,7 +39,10 @@ class Member {
     }
 }
 
+// Main class
+
 public class LibraryManagementSystem {
+
     static Scanner scanner = new Scanner(System.in);
     static List<Book> books = new ArrayList<>();
     static List<Member> members = new ArrayList<>();
