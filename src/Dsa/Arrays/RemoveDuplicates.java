@@ -17,6 +17,21 @@ public class RemoveDuplicates {
         return temp;
     }
 
+
+    static List<Integer> removeDup(int[] arr){
+        List<Integer> newArr = new ArrayList<>();
+
+
+        for(int i = 0; i < arr.length; i++){
+
+            if(i == 0 || arr[i] != arr[i - 1]){
+                newArr.add(arr[i]);
+            }
+        }
+
+        return newArr;
+    }
+
     static ArrayList<Integer> removeDuplicatesGFG(int[] arr) {
         // code here
         int removed_duplicated_count = 0;
@@ -54,6 +69,6 @@ public class RemoveDuplicates {
     public static void main(String[] args) {
         int[] arr = { 1,3,3,5,5,6,7};
 
-        System.out.println(removeDuplicatesGFG(arr));
+        System.out.println(removeDup(arr));
     }
 }
