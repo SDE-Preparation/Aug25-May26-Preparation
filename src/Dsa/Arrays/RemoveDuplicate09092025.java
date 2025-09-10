@@ -40,12 +40,12 @@ public class RemoveDuplicate09092025 {
         return newArr;
     }
 
-    HashSet<Integer> seen = new HashSet<>();
-    for(int num : arr) {
-        if(!seen.add(num)) {  // add() returns false if already present
-            newArr.add(num);
-        }
-    }
+//    HashSet<Integer> seen = new HashSet<>();
+//    for(int num : arr) {
+//        if(!seen.add(num)) {  // add() returns false if already present
+//            newArr.add(num);
+//        }
+//    }
 
 
 }
