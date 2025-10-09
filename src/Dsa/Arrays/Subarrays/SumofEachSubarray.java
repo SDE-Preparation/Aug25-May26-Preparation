@@ -4,35 +4,34 @@ public class SumofEachSubarray {
 
     public static void main(String[] args) {
 
-        int[] arr = { 1, 2, 3, 4, 5};
+        int[] arr = { 1,4,4};
 
         sumOfEach(arr);
     }
 
     public static void sumOfEach(int[] arr){
 
-        int max = Integer.MIN_VALUE;
-        int min = Integer.MIN_VALUE;
-        int count = 0;
+
+        int len = 0;
         for(int start = 0; start < arr.length; start++){
-
+            int sum = 0;
             for(int end = start; end < arr.length; end++){
-                int sum = 0;
 
-                for(int k = start; k <= end; k++){
-                    sum += arr[k];
+                sum += arr[end];
 
+                if(sum >= 4){
 
-                }
-
-                if(sum == 3){
-                    count++;
+                    if(len == 0){
+                        len = (end - start) + 1;
+                    }else{
+                        len = Math.min(len,(end - start) + 1 );
+                    }
                 }
 
 
             }
         }
 
-        System.out.println("count value " + count);
+        System.out.println("minimum length " + len);
     }
 }
