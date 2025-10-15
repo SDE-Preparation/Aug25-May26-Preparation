@@ -12,8 +12,8 @@ public class PrefixSumWithHashMap {
         System.out.println(subarraySum(arr, target));
     }
     public static int subarraySum(int[] nums, int k) {
-        int count = 0;
         int sum = 0;
+        int result = 0;
         Map<Integer, Integer> prefixMap = new HashMap<>();
         prefixMap.put(0, 1); // base case
 
@@ -22,14 +22,38 @@ public class PrefixSumWithHashMap {
 
             // if prefix[r] - k exists, we found valid subarray(s)
             if (prefixMap.containsKey(sum - k)) {
-                count += prefixMap.get(sum - k);
+                result += prefixMap.get(sum - k);
             }
 
             // store prefix sum occurrence
             prefixMap.put(sum, prefixMap.getOrDefault(sum, 0) + 1);
         }
 
-        return count;
+        return result;
+    }
+
+
+    public static int subArrayMaxSum(int[] nums, int k){
+
+        int count = 0;
+        int sum = 0;
+        int max = 0;
+
+        Map<Integer,Integer> prefixSum = new HashMap<>();
+
+
+        prefixSum.put(0,1);
+
+        for(int num = 0; num < nums.length; num++){
+
+            sum += nums[num];
+
+            if(prefixSum.containsKey(sum - k)){
+                if(max == 0){
+                    max = 
+                }
+            }
+        }
     }
 
 }
