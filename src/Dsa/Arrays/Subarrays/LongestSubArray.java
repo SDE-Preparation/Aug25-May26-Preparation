@@ -18,7 +18,7 @@ public class LongestSubArray {
             // If (sum - k) was seen before, subarray between (oldIndex+1 → i) = k
             if (map.containsKey(sum - k)) {
                 int len = i - map.get(sum - k);
-                maxLen = Math.max(maxLen, len);
+                maxLen = Math.min(maxLen, len);
             }
 
             // Store first occurrence only (for longest)
@@ -29,7 +29,7 @@ public class LongestSubArray {
     }
 
     public static void main(String[] args) {
-        int[] arr = {1, 2, 3, 1, 1, 1, 1};
+        int[] arr = {1, 2, 1, 1, 1, 1};
         int k = 3;
         System.out.println("Longest subarray length = " + longestSubarray(arr, k));
     }
