@@ -1,3 +1,5 @@
+package OOPS;
+
 import OOPS.Practice.Student; // Importing our package
 
 public class Main {
