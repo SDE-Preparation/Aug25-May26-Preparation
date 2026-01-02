@@ -2,14 +2,14 @@ package OOPS.Encapsulation;
 
 
 
-class BankAccount1 {
+class Examples {
     // Private fields (data hiding)
     private String accountNumber;
     private double balance;
     private String ownerName;
 
     // Constructor
-    public BankAccount1(String accountNumber, String ownerName) {
+    public Examples(String accountNumber, String ownerName) {
         this.accountNumber = accountNumber;
         this.ownerName = ownerName;
         this.balance = 0.0;
@@ -40,11 +40,9 @@ class BankAccount1 {
         }
         return false;
     }
-}
 
-public class Examples {
     public static void main(String[] args) {
-        BankAccount1 account = new BankAccount1("123456", "John Doe");
+        Examples account = new Examples("123456", "John Doe");
         System.out.println(account.accountNumber);
         account.deposit(1000);
         System.out.println("Balance: $" + account.getBalance()); // $1000.0
